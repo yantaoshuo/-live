@@ -34,4 +34,7 @@
 	font-size: 36rpx;
 	color: #8f8f94;
 }
+.list-item{
+	width: 375rpx;height: 375rpx;padding: 5rpx;box-sizing: border-box;position: relative;
+}
 

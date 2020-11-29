@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "f-gift": "/components/live/f-gift",
+    "uni-popup": "/components/uni-ui/uni-popup/uni-popup",
+    "f-danmu": "/components/live/f-danmu"
+  }
+}

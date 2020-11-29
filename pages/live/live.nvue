@@ -37,7 +37,7 @@
 		
 			<!-- 金币 -->
 			<view style="height: 80rpx;" class="px-2 my-2">
-				<view style="width: 325rpx;background-color: rgba(0,0,0,0.4);" class="flex flex-row rounded-circle align-center">
+				<view style="width: 325rpx;background-color: rgba(0,0,0,0.4);" class="flex flex-row rounded-circle align-center" >
 					<view class="p">
 						<text class="text-warning">金币</text>
 					</view>
@@ -103,7 +103,7 @@
 						</swiper-item>
 					</swiper>
 				<view style="height: 100rpx; " class="flex align-center justify-end">
-					<view class="bg-warning flex align-center justify-center py-2 px-2 ml-3 rounded" @click="submit">
+					<view class="bg-warning flex align-center justify-center py-2 px-2 ml-3 rounded" @click="openCoin">
 						<text class="font ">充值</text>
 					</view>
 					<view class="bg-main flex align-center justify-center py-2 px-2 ml-3 rounded" @click="sendGift">
@@ -180,6 +180,11 @@
 		},
 		openGift(){
 			this.$refs.giftPopup.open()
+		},
+		openCoin(){
+			uni.navigateTo({
+				url:'../coin/coin'
+			})
 		},
 		submit(){
 			if(this.content === ''){

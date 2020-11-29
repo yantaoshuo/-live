@@ -8,12 +8,12 @@
 					});
 					
 					// 监听底部导航中间凸起按钮
-					// uni.onTabBarMidButtonTap(()=>{
-					// 	this.authJump({
-					// 		url: '/pages/create-live/create-live',
-					// 	})
-					// 	console.log('点击了中间按钮');
-					// })
+					uni.onTabBarMidButtonTap(()=>{
+						uni.navigateTo({
+							url:'/pages/create-live/create-live'
+						})
+						console.log('点击了中间按钮');
+					})
 					
 					//this.$store.dispatch('initUser')
 					
