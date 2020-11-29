@@ -1,0 +1,91 @@
+<template>
+	<view >
+		<!-- 轮播图 -->
+		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="200" style="width: 750rpx;height: 250rpx;">
+			<swiper-item>
+				<image src="../../static/demo/1.jpg" style="width: 750rpx;height: 250rpx;" mode=""></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="../../static/demo/1.jpg" style="width: 750rpx;height: 250rpx;" mode=""></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="../../static/demo/1.jpg" style="width: 750rpx;height: 250rpx;" mode=""></image>
+			</swiper-item>
+		</swiper>
+		<!-- 列表 -->
+		<view class="flex flex-wrap">
+			<view class="list-item" v-for="i in 10" :key="i" @click="openLive">
+				<image src="../../static/demo/1.jpg" style="width: 365rpx;height: 365rpx;" class="rounded" mode="aspectFill"></image>
+				<view class="rounded-circle px-2 flex align-center" style="position: absolute;left: 15rpx;top: 15rpx;background-color: rgba(0,0,0,0.4);">
+					<text class="iconfont iconbizhongguanli text-warning mr-1"></text>
+					<text class="text-white font">0</text>
+				</view>
+				<view class="rounded-circle px-2 flex align-center" style="position: absolute;right: 15rpx;top: 15rpx;background-color: rgba(0,0,0,0.4);">
+					<text class="font-sm text-white mr-1">人气:</text>
+					<text class="font-sm text-white font">0</text>
+				</view>
+				<view class="rounded-circle flex align-center" style="position: absolute;left: 15rpx;bottom: 15rpx;background-color: rgba(0,0,0,0.4);">
+					<text class="font text-white mr-1">标题</text>
+				</view>
+				<view class="rounded-circle px-2 flex align-center" style="position: absolute;right: 15rpx;bottom: 15rpx;background-color: rgba(0,0,0,0.4);">
+					<text style="width: 20rpx;height: 20rpx;" class="rounded-circle  bg-danger mr-1"></text>
+					<text class="font text-white">已结束</text>
+				</view>
+			</view>
+			
+			
+		</view>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				title: 'Hello'
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {
+			openLive(){
+				uni.navigateTo({
+					url:'../live/live'
+				})
+			}
+		}
+	}
+</script>
+
+<style>
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		height: 200rpx;
+		width: 200rpx;
+		margin-top: 200rpx;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
+	}
+
+	.text-area {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
+	.list-item{
+		width: 375rpx;height: 375rpx;padding: 5rpx;box-sizing: border-box;position: relative;
+	}
+</style>

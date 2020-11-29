@@ -1,0 +1,62 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"app-plus":{
+					"titleNVIew":"直播live",
+					"titleAlign":"left",
+					"buttons":[{
+						"type":"memu"
+					}]
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/live/live",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "直播live",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+				"color":"#707070",
+				"selectedColor":"#8745FF",
+				"backgroundColor":"#FFFFFF",
+				"borderStyle":"black",
+				"midButton":{
+					"iconPath":"static/tabbar/min.png",
+					"iconWidth":"60px",
+					"height":"65px"
+				},
+				"list":[{
+					"iconPath":"./static/tabbar/find.png",
+					"selectedIconPath":"static/tabbar/find-selected.png",
+					"pagePath":"pages/index/index",
+					"text":"发现"
+				},{
+					"iconPath":"static/tabbar/my.png",
+					"selectedIconPath":"static/tabbar/my-selected.png",
+					"pagePath":"pages/my/my",
+					"text":"我的"
+				}]
+			}
+}
